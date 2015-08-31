@@ -11,6 +11,9 @@
 
 
 #include "Bsp/Api.h"
+#include "Bsp/Execution.h"
+#include "Bsp/WatchDog.h"
+
 
 
 /// Stub
@@ -61,4 +64,20 @@ void Bsp_Api_initialize( void )
     Bsp_Api_turnOn_debug2();
     Bsp_Api_turnOff_debug2();
     Bsp_Api_toggle_debug2();
+
+    int r = -1;
+    switch( Bsp_Execution_getResetType() )
+        {
+        case BSP_EXECUTION_RESET_UNKNOWN:   r = BSP_EXECUTION_RESET_UNKNOWN;   break;
+        case BSP_EXECUTION_RESET_COLD:      r = BSP_EXECUTION_RESET_COLD;      break;
+        case BSP_EXECUTION_RESET_WARM:      r = BSP_EXECUTION_RESET_WARM;      break;
+        case BSP_EXECUTION_RESET_BROWN_OUT: r = BSP_EXECUTION_RESET_BROWN_OUT; break;
+        case BSP_EXECUTION_RESET_EXECPTION: r = BSP_EXECUTION_RESET_EXECPTION; break;
+        default: break;
+        }
+
+    Bsp_Execution_restart();
+    Bsp_Execution_stop();
+    Bsp_Execution_reboot();
+    Bsp_Execution_shutdown();
     }
