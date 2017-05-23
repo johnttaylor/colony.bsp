@@ -53,7 +53,7 @@ void Bsp_Api_initialize( void );
 
 /////////////////////////////////////////////////////////////////////////////
 //
-/** This method will disable ALL interrupts, i.e maniuplate the global 
+/** This method will disable ALL interrupts, i.e manipulate the global 
     enable/disable flag in the PSW.
 
     \b Prototype:
@@ -62,7 +62,7 @@ void Bsp_Api_initialize( void );
 #define Bsp_Api_disableIrqs                 Bsp_Api_disableIrqs_MAP
 
 
-/** This method will enable ALL interrupts, i.e maniuplate the global 
+/** This method will enable ALL interrupts, i.e manipulate the global 
     enable/disable flag in the PSW.
 
     \b Prototype:
@@ -89,7 +89,7 @@ void Bsp_Api_initialize( void );
 
 
 /** This method will pop/update the IRQ enabled/disabled flags from
-    a previosly push IRQ state vaule.  This method should all
+    a previously push IRQ state value.  This method should all
     be called in 'pairs' with the Bsp_Api_pushAndDisableIrqs() method.
 
     \b Prototype:
@@ -101,7 +101,7 @@ void Bsp_Api_initialize( void );
 /////////////////////////////////////////////////////////////////////////////
 //
 /** This method will turn on "Debug LED 1".  The concept is that every board 
-    hasone or more LEDs, IO Pins, etc. that can be used for debugging purposes.
+    has one or more LEDs, IO Pins, etc. that can be used for debugging purposes.
  
     \b Prototype:
         void Bsp_Api_turnOn_debug1( void );
@@ -110,7 +110,7 @@ void Bsp_Api_initialize( void );
 
 
 /** This method will turn off "Debug LED 1".  The concept is that every board 
-    hasone or more LEDs, IO Pins, etc. that can be used for debugging purposes.
+    has one or more LEDs, IO Pins, etc. that can be used for debugging purposes.
  
     \b Prototype:
         void Bsp_Api_turnOff_debug1( void );
@@ -118,7 +118,7 @@ void Bsp_Api_initialize( void );
 #define Bsp_Api_turnOff_debug1              Bsp_Api_turnOff_debug1_MAP
 
 /** This method will toggle "Debug LED 1".  The concept is that every board 
-    hasone or more LEDs, IO Pins, etc. that can be used for debugging purposes.
+    has one or more LEDs, IO Pins, etc. that can be used for debugging purposes.
  
     \b Prototype:
         void Bsp_Api_toggle_debug1( void );
@@ -128,7 +128,7 @@ void Bsp_Api_initialize( void );
 
 
 /** This method will turn on "Debug LED 2".  The concept is that every board 
-    hasone or more LEDs, IO Pins, etc. that can be used for debugging purposes.
+    has one or more LEDs, IO Pins, etc. that can be used for debugging purposes.
  
     \b Prototype:
         void Bsp_Api_turnOn_debug2( void );
@@ -137,7 +137,7 @@ void Bsp_Api_initialize( void );
 
 
 /** This method will turn off "Debug LED 2".  The concept is that every board 
-    hasone or more LEDs, IO Pins, etc. that can be used for debugging purposes.
+    has one or more LEDs, IO Pins, etc. that can be used for debugging purposes.
  
     \b Prototype:
         void Bsp_Api_turnOff_debug2( void );
@@ -145,7 +145,7 @@ void Bsp_Api_initialize( void );
 #define Bsp_Api_turnOff_debug2              Bsp_Api_turnOff_debug2_MAP
 
 /** This method will toggle "Debug LED 2".  The concept is that every board 
-    hasone or more LEDs, IO Pins, etc. that can be used for debugging purposes.
+    has one or more LEDs, IO Pins, etc. that can be used for debugging purposes.
  
     \b Prototype:
         void Bsp_Api_toggle_debug2( void );
