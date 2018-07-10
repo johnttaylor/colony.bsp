@@ -6,7 +6,7 @@
 * agreement (license.txt) in the top/ directory or on the Internet at           
 * http://integerfox.com/colony.core/license.txt
 *                                                                               
-* Copyright (c) 2014, 2015  John T. Taylor                                        
+* Copyright (c) 2014-2018  John T. Taylor                                        
 *                                                                               
 * Redistributions of the source code must retain the above copyright notice.    
 *----------------------------------------------------------------------------*/ 
@@ -17,12 +17,12 @@
     is obviously platform dependent and as such the specific behavior is NOT
     guarantied on ALL platforms.  However, what is GUARENTIED for ALL 
     platforms is that the execution of the application will be stopped - at
-    least momemtarly.
+    least momentarily.
 
     ALL Colony.* BSPs are ENCOURAGED to support this interface. The default
     implementation maps to a forever loop with interrupts disabled. Use the 
     config preprocessor symbols HAVE_BSP_EXECUTION_xxx to disable and/or turn 
-    off the default implemenation.
+    off the default implementation.
  */
 
 
@@ -50,13 +50,13 @@ extern "C" {
 /// Reset due to drop in Voltage
 #define BSP_EXECUTION_RESET_BROWN_OUT           BSP_EXECUTION_RESET_BROWN_OUT_MAP
 
-/// Reset due to an unhandled CPU execption/error
+/// Reset due to an unhandled CPU exception/error
 #define BSP_EXECUTION_RESET_EXECPTION           BSP_EXECUTION_RESET_EXECPTION_MAP
 
 
 /** This method returns information about the how the application's platform
     was last came out of reset.  See the above BSP_EXECUTION_RESET_xxxx
-    marcos for the possible return values.  The application/platform is free
+    macros for the possible return values.  The application/platform is free
     define additional reason codes
 
  

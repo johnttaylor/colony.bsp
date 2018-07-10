@@ -6,7 +6,7 @@
 * agreement (license.txt) in the top/ directory or on the Internet at           
 * http://integerfox.com/colony.core/license.txt
 *                                                                               
-* Copyright (c) 2014, 2015  John T. Taylor                                        
+* Copyright (c) 2014-2018  John T. Taylor                                        
 *                                                                               
 * Redistributions of the source code must retain the above copyright notice.    
 *----------------------------------------------------------------------------*/ 
@@ -14,12 +14,12 @@
 
     This file defines a common/generic interface for managing the application's
     and/or platform's watchdog.  The watchdog is responsible for restarted the
-    application/platform if watchdog is not 'kicked' within the preconfigured
+    application/platform if watchdog is not 'kicked' within the pre-configured
     time intervals.
 
     ALL Colony.* BSPs are ENCOURAGED to support this interface. The default
     implementation DOES NOTHING. Use the config preprocessor symbols 
-    HAVE_BSP_WATCH_DOG_xxx to disable and/or turn off the default implemenation.
+    HAVE_BSP_WATCH_DOG_xxx to disable and/or turn off the default implementation.
  */
 
 
@@ -37,7 +37,7 @@ extern "C" {
 
 /** This method starts the watchdog mechanism.  Once started, the watchdog
     mechanism can not be disabled/turned off.  This method is also responsible
-    for configuring/setting the time interval/frequency that that watchdog
+    for configuring/setting the time interval/frequency that watchdog
     must be kicked to keep the application/platform from resetting.
  
     \b Prototype:
