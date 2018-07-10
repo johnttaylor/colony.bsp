@@ -37,4 +37,3 @@ make.log
 *.gcno
 *.idb
 *.pdb
-*.lst
