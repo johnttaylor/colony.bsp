@@ -12,6 +12,7 @@ url = www.integerfox.com/colony.bsp
 [immediate_deps]
 
 [weak_deps]
+nqbp\\1.1.0
 
 [transitive_deps]
 
