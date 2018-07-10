@@ -1,9 +1,9 @@
 [info]
 name = colony.bsp
 branch = main
-version = 0.0.0
-pubtime = 0
-pubtimelocal = 
+version = 0.0.1
+pubtime = 1531185306
+pubtimelocal = Mon, 09 Jul 2018 19:15:06
 desc = The abstract/generic BSP interfaces definition for Colony C++ class library and packages
 owner = John Taylor
 email = John.T.Taylor@gmail.com
