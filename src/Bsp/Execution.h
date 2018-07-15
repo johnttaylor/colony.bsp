@@ -69,27 +69,6 @@ extern "C" {
 
 /////////////////////////////////////////////////////////////////////////////
 //
-
-/** This method restarts the application. There are no guaranties on how
-    gracefully or safe the restart is.
- 
-    \b Prototype:
-        void Bsp_Execution_restart(void);
- */
-#define Bsp_Execution_restart                       Bsp_Execution_restart_MAP
-
-
-/** This method stops the application. There are no guaranties on how
-    gracefully the application is stopped.
- 
-    \b Prototype:
-        void Bsp_Execution_stop(void);
- */
-#define Bsp_Execution_stop                          Bsp_Execution_stop_MAP
-
-
-/////////////////////////////////////////////////////////////////////////////
-//
 /** This method reboots the application's platform. There are no guaranties on 
     how gracefully or safe the reboot is. 
 
@@ -113,14 +92,6 @@ extern "C" {
 /////////////////////////////////////////////////////////////////////////////
 //                          DEFAULT IMPLEMENATION
 /////////////////////////////////////////////////////////////////////////////
-
-#ifndef HAVE_BSP_EXECUTION_RESTART
-#define Bsp_Execution_restart_MAP()                 {Bsp_Api_disableIrqs();for(;;);}
-#endif
-
-#ifndef HAVE_BSP_EXECUTION_STOP
-#define Bsp_Execution_stop_MAP()                    {Bsp_Api_disableIrqs();for(;;);}
-#endif
 
 #ifndef HAVE_BSP_EXECUTION_REBOOT
 #define Bsp_Execution_reboot_MAP()                  {Bsp_Api_disableIrqs();for(;;);}

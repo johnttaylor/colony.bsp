@@ -77,8 +77,6 @@ void Bsp_Api_initialize( void )
     }
 
     printf( "reset type=%d\n", r );
-    Bsp_Execution_restart();
-    Bsp_Execution_stop();
     Bsp_Execution_reboot();
     Bsp_Execution_shutdown();
 }
