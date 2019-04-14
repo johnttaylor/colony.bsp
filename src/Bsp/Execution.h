@@ -1,28 +1,28 @@
 #ifndef Bsp_Execution_h_
 #define Bsp_Execution_h_
-/*----------------------------------------------------------------------------- 
-* This file is part of the Colony.Core Project.  The Colony.Core Project is an   
-* open source project with a BSD type of licensing agreement.  See the license  
-* agreement (license.txt) in the top/ directory or on the Internet at           
+/*-----------------------------------------------------------------------------
+* This file is part of the Colony.Core Project.  The Colony.Core Project is an
+* open source project with a BSD type of licensing agreement.  See the license
+* agreement (license.txt) in the top/ directory or on the Internet at
 * http://integerfox.com/colony.core/license.txt
-*                                                                               
-* Copyright (c) 2014-2019  John T. Taylor                                        
-*                                                                               
-* Redistributions of the source code must retain the above copyright notice.    
-*----------------------------------------------------------------------------*/ 
-/** @file 
+*
+* Copyright (c) 2014-2019  John T. Taylor
+*
+* Redistributions of the source code must retain the above copyright notice.
+*----------------------------------------------------------------------------*/
+/** @file
 
-    This file defines a common/generic interface for restarting, rebooting,
-    etc. and application and/or a physical device.  The actual implementation
-    is obviously platform dependent and as such the specific behavior is NOT
-    guarantied on ALL platforms.  However, what is GUARENTIED for ALL 
-    platforms is that the execution of the application will be stopped - at
-    least momentarily.
+	This file defines a common/generic interface for restarting, rebooting,
+	etc. and application and/or a physical device.  The actual implementation
+	is obviously platform dependent and as such the specific behavior is NOT
+	guarantied on ALL platforms.  However, what is GUARENTIED for ALL
+	platforms is that the execution of the application will be stopped - at
+	least momentarily.
 
-    ALL Colony.* BSPs are ENCOURAGED to support this interface. The default
-    implementation maps to a forever loop with interrupts disabled. Use the 
-    config preprocessor symbols HAVE_BSP_EXECUTION_xxx to disable and/or turn 
-    off the default implementation.
+	ALL Colony.* BSPs are ENCOURAGED to support this interface. The default
+	implementation maps to a forever loop with interrupts disabled. Use the
+	config preprocessor symbols HAVE_BSP_EXECUTION_xxx to disable and/or turn
+	off the default implementation.
  */
 
 
@@ -31,7 +31,7 @@
 
 // Start C++
 #ifdef __cplusplus
-extern "C" {    
+extern "C" {
 #endif
 
 
@@ -55,13 +55,13 @@ extern "C" {
 
 
 /** This method returns information about the how the application's platform
-    was last came out of reset.  See the above BSP_EXECUTION_RESET_xxxx
-    macros for the possible return values.  The application/platform is free
-    define additional reason codes
+	was last came out of reset.  See the above BSP_EXECUTION_RESET_xxxx
+	macros for the possible return values.  The application/platform is free
+	define additional reason codes
 
- 
-    \b Prototype:
-        uint32_t Bsp_Execution_getResetType(void);
+
+	\b Prototype:
+		uint32_t Bsp_Execution_getResetType(void);
  */
 #define Bsp_Execution_getResetType                  Bsp_Execution_getResetType_MAP
 
@@ -69,20 +69,20 @@ extern "C" {
 
 /////////////////////////////////////////////////////////////////////////////
 //
-/** This method reboots the application's platform. There are no guaranties on 
-    how gracefully or safe the reboot is. 
+/** This method reboots the application's platform. There are no guaranties on
+	how gracefully or safe the reboot is.
 
-    \b Prototype:
-        void Bsp_Execution_reboot( void );
+	\b Prototype:
+		void Bsp_Execution_reboot( void );
  */
 #define Bsp_Execution_reboot                        Bsp_Execution_reboot_MAP
 
 
-/** This method shuts down the application's platform. There are no guaranties on 
-    how gracefully or safe the shutdown is. 
+/** This method shuts down the application's platform. There are no guaranties on
+	how gracefully or safe the shutdown is.
 
-    \b Prototype:
-        void Bsp_Execution_shutdown( void );
+	\b Prototype:
+		void Bsp_Execution_shutdown( void );
  */
 #define Bsp_Execution_shutdown                      Bsp_Execution_shutdown_MAP
 
